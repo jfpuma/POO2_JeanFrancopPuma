@@ -1,0 +1,34 @@
+Practica2_POO2
+
+Clase Vendedor
+	definir nombreVendedor como caracter
+	definir nroAutosVendidos como entero
+	definir valor_totalVentas como real
+	constante sueldoBase como entero = 500000
+	constante comisionNroVentas como entero = 200000
+	
+	Metodo calcularSueldo()
+		Mostrar "El sueldo total del vendedor es " Mostrar "El sueldo total del vendedor " nombre " es: " sueldoBase + AutosVendidos*comisionNroVentas + valor_totalVentas*0.10
+	fin metodo
+	
+	Metodo leerDatos()
+		Mostrar "Introduzca el nombre del vendedor: "
+		leer nombre
+	
+		Mostrar "Ingrese el numero de carros vendidos por el vendedor " vend1.nombre
+		leer nroAutosVendidos
+	
+		Mostrar "Introduzca el monto total de ventas del vendedor " vend1.nombre
+		leer valor_totalVentas
+		
+	
+Fin clase
+
+Algoritmo Practica2_POO2
+	definir vend1 como vendedor
+	vend1= nuevo Vendedor()
+	
+	vend1.leerDatos
+	vend1.calcularSueldo
+
+fin algoritmo

@@ -1,0 +1,54 @@
+Clase Cliente
+	Definir nombre como caracter
+		
+	Metodo leerNombreCliente()
+		Mostrar "Ingrese el nombre del cliente "
+		leer nombre
+	
+	fin metodo
+	
+	Metodo mostrarNombreCliente()
+	
+		Mostrar "El nombre del cliente es " nombre
+	
+	fin metodo
+		
+Fin clase
+
+Clase Vehiculo
+	Definir cuotaIncial como real
+	Definir cuotasMensuales como real
+	Definir preciovehiuculo como real
+	
+	
+	Metodo indicarPrecioUnitario()
+		Mostrar "Ingrese el precio del vehiculo a comprar "
+		leer precioVehiculo
+	
+	fin metodo	
+	
+	Metodo calcularyMostrarCuotaInicial()
+		cuotaIncial = precioVehiculo*0.30
+		Mostrar "La cuota inicial a pagar seria " cuotaIncial
+	
+	fin metodo
+	
+	Metodo calcularCuotasMensuales()
+	
+		Mostrar "El restante a pagar en cuotas mensuales seria " (precioVehiculo-cuotaIncial)24
+	
+	fin metodo
+Algoritmo
+	Definir cliente1 como Cliente
+	cliente1 = nuevo Cliente()
+	Definir vehiculo1 como Vehiculo
+	vehiculo1 = nuevo Vehiculo()
+
+	cliente1.leerNombreCliente()
+	vehiculo1.indicarPrecioUnitario()
+	cliente1.mostrarNombreCliente()
+	vehiculo1.calcularyMostrarCuotaInicial()
+	vehiculo1.calcularCuotasMensuales()
+
+Fin algoritmo
+
