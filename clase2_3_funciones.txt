@@ -1,0 +1,24 @@
+clase Vehiculo
+	definir placa como caracter
+	definir fecha_fabricacion como Fecha
+	definir fecha_venta como Fecha
+	definir cliente como Cliente
+	
+	metodo leerPlaca(mensaje)
+		mostrar mensaje
+		leer placa
+	fin metodo
+fin clase
+
+Algoritmo clase2_3_funciones
+
+	definir veh, vh2 como Vehiculo
+	definir msj como caracter
+	veh = nuevo Vehiculo()
+	vh2 = nuevo Vehiculo()
+
+	msj="Int. la placa: "
+	
+	vh.leerPlaca(msj)
+	veh.leerPlaca("int. la placa:")
+	
