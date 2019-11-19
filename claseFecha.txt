@@ -9,13 +9,13 @@ clase Fecha
 	fin metodo
 	
 	metodo leerFecha()
-		Mostrar "Ingrese el dia" 
+		Mostrar "Ingrese el dia:" 
 		leer dia
-		Mostrar "Ingrese el mes"
+		Mostrar "Ingrese el mes:"
 		leer mes
-		Mostrar "Ingrese el año"
+		Mostrar "Ingrese el año:"
 		leer año
-		fin metodo
+	fin metodo
 fin clase
 
 clase Vehiculo

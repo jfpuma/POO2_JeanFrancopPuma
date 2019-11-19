@@ -1,0 +1,81 @@
+clase Pantalon
+	privado definir tipo como caracter
+	privado definir precio como entero
+	
+	prublico metodo determinarPrecio() como real
+		segun mayuscula(tipo)
+		"A" : retornar 141246
+		"B" : retornar 96720
+		"C" : retornar 58900
+		
+		fin segun
+	fin metodo
+	
+	publico metodo leerTipoPantalon()
+		Mostrar "Introduzca el tipo de pantalon: "
+		leer tipo
+	fin metodo
+Fin clase
+
+
+clase Cliente
+	privado definir nombre como caracter
+	privado definir sexo como caracter
+	
+	publico metodo leerDatos()
+		Mostrar "Ingrese el nombre del cliente: "
+		leer nombre
+		Mostrar "Ingrese el genero del cliente: "
+		leer sexo
+	fin metodo
+	
+	publico metodo esMujer() como logico
+		retornar mayuscula(sexo) == "F"
+	fin metodo	
+Fin clase
+
+clase Venta
+	privado definir cliente como Cliente
+	privado definir pantalon como Pantalon
+	privado definir cantidad como entero
+	
+	privado metodo leerCantidad()
+		mostrar "Introduzca la cantidad"
+		leer cantidad
+	fin metodo
+	
+	publico metodo procesarVenta()
+			cliente.leerNombre()
+			pantalon.leerTipoPantalon()
+			leerCantidad()
+	fin metodo
+	
+	publico metodo calcularDescuento() como real
+		si cliente.esMujer() y cantidad > 6 entonces
+			retornar calcularSubTotal()*0.1
+		sino
+			retornar 0
+		fin si	
+	fin metodo
+	
+	publico metodo calcularSubTotal() como real
+		retornar pantalon.determinarPrecio()*cantidad
+	fin metodo
+	
+	publico metodo calcularIva() como real
+		retornar calcularSubTotal()*0.16
+	fin metodo
+	
+	publico metodo calcularMontoPagar() como real
+		retornar calcularSubTotal()+calcularIva()-calcularDescuento()
+	fin metodo
+Fin clase
+
+Algoritmo tiendaX
+	definir v como Venta
+	v = nuevo Venta()
+	
+	v.procesarVenta()
+	mostrar "El subtotal es " v.calcularSubtotal()
+	mostrar "El monto a pagar es " v.calcularMontoPagar()
+fin algoritmo
