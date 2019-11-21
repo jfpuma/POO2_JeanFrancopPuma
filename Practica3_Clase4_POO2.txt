@@ -1,0 +1,19 @@
+Algoritmo colecciones
+	definir libros como Coleccion <Libro>
+	definir nombre, respuesta  como caracter
+	definir año como entero
+
+	repetir
+	Mostrar "Ingrese el nombre del libro a comprar"
+	leer nombre
+	Mostrar "Ingrese el año que se hizo el libro"
+	leer año
+	
+	libros.agregar(nuevo Libro(nombre, año))
+	
+	Mostrar "Desea agregar otro libro?"
+	leer repuestas
+	
+	hasta que Mayusculas(respuesta) == "N"
+	
+fin algoritmo

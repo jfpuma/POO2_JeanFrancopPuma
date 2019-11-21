@@ -72,10 +72,16 @@ clase Venta
 Fin clase
 
 Algoritmo tiendaX
+	definir respuesta como caracter
 	definir v como Venta
 	v = nuevo Venta()
 	
-	v.procesarVenta()
-	mostrar "El subtotal es " v.calcularSubtotal()
-	mostrar "El monto a pagar es " v.calcularMontoPagar()
+	repertir
+		v.procesarVenta()
+		mostrar "El subtotal es " v.calcularSubtotal()
+		mostrar "El monto a pagar es " v.calcularMontoPagar()
+		
+		mostrar "Ingrese S si quiere procesar otra venta y N si quiere finalizar"
+		leer mayuscula(respuesta)	
+	hasta que respuesta == "N"	
 fin algoritmo
